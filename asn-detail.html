@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>Syndash - Bootstrap4 Admin Template</title>
+	<!--favicon-->
+	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+	<!--plugins-->
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto&display=swap" />
+	<!-- Icons CSS -->
+	<link rel="stylesheet" href="assets/css/icons.css" />
+	<!-- App CSS -->
+	<link rel="stylesheet" href="assets/css/app.css" />
+	<link rel="stylesheet" href="assets/css/dark-sidebar.css" />
+	<link rel="stylesheet" href="assets/css/dark-theme.css" />
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!--sidebar-wrapper-->
+		<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				<div>
+					<h6 class="logo-text fw-bold">Panel Admin</h6>
+				</div>
+				<a href="#" class="toggle-btn ms-auto text-white p-3 font-24"><i class="fa fa-bars"></i>
+				</a>
+			</div>
+			<div class="logo-bapenda text-center justify-content-center">
+				<img src="assets/images/logo-ori.png" class="logo-icon-2" alt="" />
+			</div>
+			<!--navigation-->
+			<ul class="metismenu" id="menu">
+				<li>
+					<a href="dashboard.html">
+						<div class="parent-icon"><i class="bx bx-home-alt"></i>
+						</div>
+						<div class="menu-title">Dashboard</div>
+					</a>
+				</li>
+				<li class="menu-label">My Files</li>
+				<li>
+					<a href="produk-hukum.html">
+						<div class="parent-icon"><i class="bx bx-star"></i>
+						</div>
+						<div class="menu-title">Produk Hukum</div>
+					</a>
+				</li>
+				<li>
+					<a href="sop.html">
+						<div class="parent-icon"><i class="bx bx-cloud-upload"></i>
+						</div>
+						<div class="menu-title">SOP</div>
+					</a>
+				</li>
+				<li>
+					<a href="lainnya.html">
+						<div class="parent-icon"><i class="bx bx-dots-horizontal-rounded"></i>
+						</div>
+						<div class="menu-title">Lainnya</div>
+					</a>
+				</li>
+				<li class="menu-label">Pegawai</li>
+				<li>
+					<a href="asn.html">
+						<div class="parent-icon"><i class="bx bx-group"></i>
+						</div>
+						<div class="menu-title">ASN</div>
+					</a>
+				</li>
+				<li>
+					<a href="non-asn.html">
+						<div class="parent-icon"><i class="bx bx-group"></i>
+						</div>
+						<div class="menu-title">Non-ASN</div>
+					</a>
+				</li>
+				<li class="menu-label">Penerimaan</li>
+				<li>
+					<a href="#">
+						<div class="parent-icon"> <i class="bx bx-donate-blood"></i>
+						</div>
+						<div class="menu-title">Penerimaan</div>
+					</a>
+				</li>
+				<li class="menu-label">Lainnya</li>
+				<li>
+					<a href="#" target="_blank">
+						<div class="parent-icon"><i class="bx bx-cog"></i>
+						</div>
+						<div class="menu-title">Setting</div>
+					</a>
+				</li>
+				<li>
+					<a href="index.html">
+						<div class="parent-icon"><i class="bx bx-exit"></i>
+						</div>
+						<div class="menu-title">Log Out</div>
+					</a>
+				</li>
+			</ul>
+			<!--end navigation-->
+		</div>
+		<!--end sidebar-wrapper-->
+		<!--header-->
+		<header class="top-header">
+			<nav class="navbar navbar-expand">
+				<div class="left-topbar d-flex align-items-center">
+					<a href="javascript:;" class="toggle-btn"> <i class="bx bx-menu"></i>
+					</a>
+				</div>
+				<div class="right-topbar ms-auto">
+					<ul class="navbar-nav">
+						<li class="nav-item search-btn-mobile">
+							<a class="nav-link position-relative" href="javascript:;"> <i
+									class="bx bx-search vertical-align-middle"></i>
+							</a>
+						</li>
+						<li class="nav-item dropdown dropdown-user-profile">
+							<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;"
+								data-bs-toggle="dropdown">
+								<div class="d-flex user-box align-items-center">
+									<div class="user-info">
+										<p class="user-name mb-0">Jessica Doe</p>
+										<p class="designattion mb-0">Available</p>
+									</div>
+									<img src="assets/images/avatars/avatar-1.png" class="user-img" alt="user avatar">
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-user"></i><span>Profile</span></a>
+								<a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-cog"></i><span>Settings</span></a>
+								<a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-tachometer"></i><span>Dashboard</span></a>
+								<a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-wallet"></i><span>Earnings</span></a>
+								<a class="dropdown-item" href="javascript:;"><i
+										class="bx bx-cloud-download"></i><span>Downloads</span></a>
+								<div class="dropdown-divider mb-0"></div> <a class="dropdown-item"
+									href="javascript:;"><i class="bx bx-power-off"></i><span>Logout</span></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!--end header-->
+		<!--page-wrapper-->
+		<div class="page-wrapper">
+			<!--page-content-wrapper-->
+			<div class="page-content-wrapper">
+				<div class="page-content">
+					<!--breadcrumb-->
+					<div class="page-breadcrumb d-none d-md-flex align-items-center mb-3">
+						<div class="breadcrumb-title pe-3">Data Pegawai Bapenda</div>
+						<div class="ps-3">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb mb-0 p-0">
+									<li class="breadcrumb-item"><a href="javascript:;"><i
+												class='bx bx-home-alt'></i></a>
+									</li>
+									<li class="breadcrumb-item active" aria-current="page">Detail Pegawai</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+					<!--end breadcrumb-->
+					<div class="user-profile-page">
+						<div class="card radius-15">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-12 col-lg-6 border-right mb-5">
+										<div class="d-md-flex align-items-center">
+											<div class="mb-md-0 mb-3">
+												<img src="assets/images/avatars/avatar-1.png"
+													class="rounded-circle shadow" width="130" height="130" alt="" />
+											</div>
+											<div class="ms-md-4 flex-grow-1">
+												<div class="d-flex align-items-center mb-1">
+													<h4 class="mb-0">Ramadhan Saobilhaq</h4>
+												</div>
+												<p class="mb-0 text-muted">Sr. Web Developer</p>
+												<p class="text-primary"><i class='bx bx-buildings'></i> Badan Pendapatan
+													Daerah</p>
+												<span class="badge bg-primary">PNS</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-lg-6 border-right mb-5">
+										<div class="d-md-flex align-items-center text-end">
+											<div class="ms-md-4 flex-grow-1">
+												<p class="mb-0 text-muted"><i class='far fa-phone'></i> 082134561900</p>
+												<p class="text-primary"><i class='far fa-envelope'></i>
+													saobilhaq@email.com</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--end row-->
+								<ul class="nav nav-pills">
+									<li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab"
+											href="#Experience"><span class="p-tab-name">Data Pribadi</span><i
+												class='bx bx-donate-blood font-24 d-sm-none'></i></a>
+									</li>
+									<li class="nav-item"> <a class="nav-link" id="profile-tab" data-bs-toggle="tab"
+											href="#Biography"><span class="p-tab-name">Unit Kerja</span><i
+												class='bx bxs-user-rectangle font-24 d-sm-none'></i></a>
+									</li>
+								</ul>
+								<div class="tab-content mt-3">
+									<div class="tab-pane fade show active" id="Experience">
+										<div class="card shadow-none border mb-0 radius-15">
+											<div class="card-header bg-primary text-white">
+												<h5 class="mb-0">Profil Pegawai</h5>
+											</div>
+											<div class="card-body">
+												<form class="form-horizontal">
+
+													<div class="row mb-3">
+														<label for="nip" class="col-sm-3 col-form-label">NIP</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control" id="nip"
+																value="198765432112345678" placeholder="Masukkan NIP">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="nik" class="col-sm-3 col-form-label">NIK</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control" id="nik"
+																value="3201123456789001" placeholder="Masukkan NIK">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="email" class="col-sm-3 col-form-label">Email</label>
+														<div class="col-sm-9">
+															<input readonly type="email" class="form-control" id="email"
+																value="ramadhan@example.com"
+																placeholder="Masukkan Email">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="hp" class="col-sm-3 col-form-label">No.
+															HP</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control" id="hp"
+																value="081234567890" placeholder="Masukkan Nomor HP">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="jenisPegawai" class="col-sm-3 col-form-label">Jenis
+															Pegawai</label>
+														<div class="col-sm-9">
+															<select disabled class="form-select" id="jenisPegawai">
+																<option value="">-- Pilih Jenis
+																	Pegawai --</option>
+																<option value="pns" selected>PNS
+																</option>
+																<option value="pppk">PPPK</option>
+																<option value="honorer">Honorer
+																</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="cpnsTmt" class="col-sm-3 col-form-label">CPNS
+															TMT</label>
+														<div class="col-sm-9">
+															<input readonly type="date" class="form-control"
+																id="cpnsTmt" value="2020-01-01">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="pendidikan"
+															class="col-sm-3 col-form-label">Pendidikan</label>
+														<div class="col-sm-9">
+															<select class="form-select" id="pendidikan" disabled>
+																<option value="">-- Pilih Pendidikan
+																	Terakhir --</option>
+																<option value="sma">SMA / Sederajat
+																</option>
+																<option value="d3">Diploma (D3)
+																</option>
+																<option value="s1" selected>Sarjana
+																	(S1)</option>
+																<option value="s2">Magister (S2)
+																</option>
+																<option value="s3">Doktor (S3)
+																</option>
+															</select>
+														</div>
+													</div>
+
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="Biography">
+										<div class="card shadow-none border mb-0 radius-15">
+											<div class="card-header bg-primary text-white">
+												<h5 class="mb-0">Unit Kerja Pegawai</h5>
+											</div>
+											<div class="card-body">
+												<form class="form-horizontal">
+
+													<div class="row mb-3">
+														<label for="jabatan"
+															class="col-sm-3 col-form-label">Jabatan</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control"
+																id="jabatan" value="Kepala Sub Bagian Perencanaan"
+																placeholder="Masukkan Jabatan">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="pangkat"
+															class="col-sm-3 col-form-label">Pangkat</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control"
+																id="pangkat" value="Penata Tingkat I"
+																placeholder="Masukkan Pangkat">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="golongan"
+															class="col-sm-3 col-form-label">Golongan</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control"
+																id="golongan" value="III/d"
+																placeholder="Masukkan Golongan">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="grade" class="col-sm-3 col-form-label">Grade</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control" id="grade"
+																value="12" placeholder="Masukkan Grade">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="eselon"
+															class="col-sm-3 col-form-label">Eselon</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control" id="eselon"
+																value="IV/a" placeholder="Masukkan Eselon">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="rumpun"
+															class="col-sm-3 col-form-label">Rumpun</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control" id="rumpun"
+																value="Administrasi Umum" placeholder="Masukkan Rumpun">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="tpp" class="col-sm-3 col-form-label">TPP</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control" id="tpp"
+																value="Rp 3.000.000" placeholder="Masukkan TPP">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="gaji" class="col-sm-3 col-form-label">Gaji</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control" id="gaji"
+																value="Rp 7.500.000" placeholder="Masukkan Gaji">
+														</div>
+													</div>
+
+													<div class="row mb-3">
+														<label for="tunjangan"
+															class="col-sm-3 col-form-label">Tunjangan</label>
+														<div class="col-sm-9">
+															<input readonly type="text" class="form-control"
+																id="tunjangan" value="Rp 2.500.000"
+																placeholder="Masukkan Tunjangan">
+														</div>
+													</div>
+
+												</form>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end page-content-wrapper-->
+	</div>
+	<!--end page-wrapper-->
+	<!--start overlay-->
+	<div class="overlay toggle-btn-mobile"></div>
+	<!--end overlay-->
+	<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+	<!--End Back To Top Button-->
+	<!--footer -->
+	<div class="footer">
+		<p class="mb-0">Bapenda @2025 | Developed By : <a href="https://diskominfo.oganilirkab.go.id"
+				target="_blank">Diskominfo</a>
+		</p>
+	</div>
+	<!-- end footer -->
+	</div>
+	<!-- end wrapper -->
+	<!-- JavaScript -->
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+	<!--plugins-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<!-- App JS -->
+	<script src="assets/js/app.js"></script>
+</body>
+
+</html>

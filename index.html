@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>Syndash - Bootstrap4 Admin Template</title>
+	<!--favicon-->
+	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+	<!-- loader-->
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto&display=swap" />
+	<!-- Icons CSS -->
+	<link rel="stylesheet" href="assets/css/icons.css" />
+	<!-- App CSS -->
+	<link rel="stylesheet" href="assets/css/app.css" />
+</head>
+
+<body class="bg-forgot">
+	<!-- wrapper -->
+	<div class="wrapper">
+		<div class="authentication-forgot d-flex align-items-center justify-content-center">
+			<div class="card shadow-lg forgot-box">
+				<div class="card-body">
+					<div class="text-center py-3">
+						<img src="assets/images/logo-ori.png" width="160" alt="">
+					</div>
+					<div class="">
+						<div class="form-body bg-light-primary-blue p-4 radius-15 mt-3">
+							<form class="row g-3">
+								<div class="col-12">
+									<label for="inputEmailAddress" class="form-label">Username</label>
+									<input type="text" class="form-control" id="inputEmailAddress"
+										placeholder="username">
+								</div>
+								<div class="col-12">
+									<label for="inputChoosePassword" class="form-label">Password</label>
+									<div class="input-group" id="show_hide_password">
+										<input type="password" class="form-control border-end-0"
+											id="inputChoosePassword" value="12345678" placeholder="Enter Password">
+										<a href="javascript:;" class="input-group-text bg-transparent">
+											<i class="bx bx-hide"></i>
+										</a>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-check form-switch">
+										<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+											checked="">
+										<label class="form-check-label font-13" for="flexSwitchCheckChecked">Remember
+											Me</label>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="d-grid">
+										<a href="dashboard.html" type="button" class="btn btn-primary">LOGIN</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end wrapper -->
+	<script src="assets/js/jquery.min.js"></script>
+	<!-- Tambahkan SweetAlert2 -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+	<script>
+		$(document).ready(function () {
+			$("#show_hide_password a").on('click', function (event) {
+				event.preventDefault();
+				const input = $('#show_hide_password input');
+				const icon = $('#show_hide_password i');
+
+				if (input.attr("type") === "text") {
+					input.attr('type', 'password');
+					icon.removeClass("bx-show").addClass("bx-hide");
+				} else if (input.attr("type") === "password") {
+					input.attr('type', 'text');
+					icon.removeClass("bx-hide").addClass("bx-show");
+				}
+			});
+
+			$(".btn-primary").on("click", function (e) {
+				e.preventDefault();
+				Swal.fire({
+					toast: true,
+					position: 'top-end',
+					icon: 'success',
+					title: 'Berhasil login!',
+					showConfirmButton: false,
+					timer: 2500,
+					timerProgressBar: true
+				}).then(() => {
+					window.location.href = "dashboard.html";
+				});
+			});
+		});
+	</script>
+
+
+	<script>
+		$(document).ready(function () {
+			$("#show_hide_password a").on('click', function (event) {
+				event.preventDefault();
+				const input = $('#show_hide_password input');
+				const icon = $('#show_hide_password i');
+
+				if (input.attr("type") === "text") {
+					input.attr('type', 'password');
+					icon.removeClass("bx-show").addClass("bx-hide");
+				} else if (input.attr("type") === "password") {
+					input.attr('type', 'text');
+					icon.removeClass("bx-hide").addClass("bx-show");
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

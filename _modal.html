@@ -1,0 +1,128 @@
+<!-- Tombol untuk membuka modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahDokumenModal">
+    + Tambah Dokumen
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="tambahDokumenModal" tabindex="-1" aria-labelledby="tambahDokumenLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="tambahDokumenLabel">Tambah Dokumen Baru</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <form id="formTambahDokumen" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label for="kategori" class="form-label">Kategori</label>
+                            <select id="kategori" class="form-select" required>
+                                <option value="">-- Pilih Kategori --</option>
+                                <option value="hukum">Produk Hukum</option>
+                                <option value="sop">SOP</option>
+                                <option value="lainnya">Produk Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="jenis" class="form-label">Jenis Dokumen</label>
+                            <select id="jenis" class="form-select" required>
+                                <option value="">-- Pilih Jenis --</option>
+                                <option value="peraturan">Peraturan</option>
+                                <option value="pedoman">Pedoman</option>
+                                <option value="laporan">Laporan</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="judul" class="form-label">Judul Dokumen</label>
+                            <input type="text" id="judul" name="judul" class="form-control"
+                                placeholder="Masukkan judul dokumen" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="tahun" class="form-label">Tahun Dokumen</label>
+                            <input type="number" id="tahun" name="tahun" class="form-control" placeholder="2025"
+                                min="1900" max="2100" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="nomor" class="form-label">Nomor Dokumen</label>
+                            <input type="text" id="nomor" name="nomor" class="form-control"
+                                placeholder="Masukkan nomor dokumen" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="status" class="form-label">Status Dokumen</label>
+                            <select id="status" class="form-select" required>
+                                <option value="">-- Pilih Status --</option>
+                                <option value="aktif">Aktif</option>
+                                <option value="nonaktif">Non-Aktif</option>
+                                <option value="arsip">Arsip</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="asal" class="form-label">Asal Dokumen</label>
+                            <input type="text" id="asal" name="asal" class="form-control"
+                                placeholder="Masukkan asal dokumen" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label">Upload File</label>
+                            <div class="border rounded p-4 text-center bg-light" id="dropZone">
+                                <p class="mb-2">Tarik & letakkan file di sini atau klik untuk memilih</p>
+                                <input type="file" id="fileInput" name="file" class="form-control d-none" required>
+                                <button type="button" class="btn btn-outline-primary" id="btnUpload">Pilih File</button>
+                                <div id="fileName" class="mt-2 text-muted"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Script Drag & Drop -->
+<script>
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const btnUpload = document.getElementById('btnUpload');
+    const fileName = document.getElementById('fileName');
+
+    // Klik tombol upload → buka file input
+    btnUpload.addEventListener('click', () => fileInput.click());
+
+    // Update nama file saat dipilih
+    fileInput.addEventListener('change', () => {
+        fileName.textContent = fileInput.files[0] ? .name || "";
+    });
+
+    // Event drag over
+    dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.classList.add('border-primary');
+    });
+
+    // Event drag leave
+    dropZone.addEventListener('dragleave', () => {
+        dropZone.classList.remove('border-primary');
+    });
+
+    // Event drop file
+    dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('border-primary');
+        fileInput.files = e.dataTransfer.files;
+        fileName.textContent = fileInput.files[0] ? .name || "";
+    });
+</script>
